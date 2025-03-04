@@ -8,7 +8,6 @@ Created on Thu Dec 12 16:25:48 2024
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import colors
-#from get_normal_vector import get_normal_vector, get_segment_length
 from curvilin import get_poly_curvilin_value_arr
 
 def convert_curvilin_to_cartesian(cand, m, st_i,s_arr,s_prev, s_f1, s_f): 

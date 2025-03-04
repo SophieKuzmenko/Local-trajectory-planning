@@ -40,8 +40,8 @@ def get_cand_i_speed(poly_curvilin, ro_bf, ro_cand, s_arr,s_prev, s_f1,s_f, V_Pb
  
     
 def get_complex_poly_deriv(poly,m):
-     res =[]# np.empty(len(poly))
-     for p in poly:#np.arange(1,len(poly)):
+     res =[]
+     for p in poly:
          res.append(np.polyder(p,m))
      return res
      

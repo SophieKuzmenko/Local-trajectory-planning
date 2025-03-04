@@ -6,13 +6,12 @@ Created on Thu Sep 19 22:51:48 2024
 @author: sofi
 """
 import numpy as np
-import matplotlib.pyplot as plt
+
 from generate_cand_path import generate_cand_path_curvilinear
 from calculate_angle_of_the_path import calculate_angle_of_the_path
-from space_transformations import convert_curvilin_to_cartesian#, plot_paths
+from space_transformations import convert_curvilin_to_cartesian
 from get_reference_path_arc import get_reference_path_arc_lengths
-from curvilin import get_poly_curvilin_value_arr#, plot_curvilin
-from process_cand_curv_speed import get_cand_i_curvatures, get_cand_i_speed
+from process_cand_curv_speed import get_cand_i_curvatures
 from obstacle_collision_check import obstacle_collision_check
 """
  Loading the map
@@ -33,15 +32,15 @@ def main(s_prev,q_prev, theta_prev, curb_prev,st_i, obstacles,R_ob, R_v, pos, ax
     hds_f2_min = 30#3*car_l + 0.3# min acceptable length for the permanent phase
     hd_ss = 0.5
     # real-lie parameters
-    hroad_w = 4
-    hline_w = 1.5
+   # hroad_w = 4
+    #hline_w = 1.5
     hcar_w = 1.8
-    hcar_l = 4.1
+    #hcar_l = 4.1
     hroad_margins = np.array([-2, 2]);
     hro_max = 0.2# 07#0.1 # https://www.cds.caltech.edu/~murray/books/AM08/pdf/fbs-steering_17Jul19.pdf
-    hV_Pbf_des = 25 # TODO: integrate with ROSS, to ask for desired velocity via ROSS
-    hV_Pbf_lim = 50 # TODO: also research more velocity limits for our frame
-    hacc_max = 2.5 # TODO: tune later #maximum acceptable lateral acceleration,
+    # hV_Pbf_des = 25 # TODO: integrate with ROSS, to ask for desired velocity via ROSS
+    # hV_Pbf_lim = 50 # TODO: also research more velocity limits for our frame
+    # hacc_max = 2.5 # TODO: tune later #maximum acceptable lateral acceleration,
     ###############################
  
     """
@@ -58,14 +57,8 @@ def main(s_prev,q_prev, theta_prev, curb_prev,st_i, obstacles,R_ob, R_v, pos, ax
     params = get_reference_path_arc_lengths(m, st_i, hpath_distance)
     s =params[0] 
     end_i = params[1]
-    """
-     Generating candidate paths in curvilinear parameters
-    """
-    
-    
-    ####
-    # function ? receiving s_prev_theta_prev q_prev curb_prev and ind_st
-    ####
+
+    # Considering the case where the points taken continously are from two parts of the path array, e.g. end and beginning
     if (end_i < st_i):
         curb_bf = 1/m[2,st_i:-1]
         curb_bf =np.concatenate((curb_bf,1/m[2,0:end_i]))

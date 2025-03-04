@@ -17,7 +17,6 @@ def generate_cand_path_curvilinear(cand, s_f1, s_f2, s_f, s_prev,q_prev, theta_p
 
    
 import sympy as sp
-   #import matplotlib.pyplot as plt
 
 def solve_q_polynomial(s_prev, q_prev, s_f1, q_f, theta_prev, theta_bf, curb_prev, curb_bf):
        a2,a3,a4= sp.symbols('a2 a3 a4')

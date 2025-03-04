@@ -18,11 +18,11 @@ def calculate_angle_of_the_path(A):
   slope = 1 / r
   angle = np.arctan(slope)
   # Adjust the angle based on the quadrant to get the correct angle relative to the x-axis
-  if x < 0 and y > 0:  # Quadrant II
+  if x < 0 and y > 0:  # quadrant 2
     angle += np.pi
-  elif x < 0 and y < 0:  # Quadrant III
+  elif x < 0 and y < 0:  # quadrant 3
     angle += np.pi
-  elif x > 0 and y < 0:  # Quadrant IV
+  elif x > 0 and y < 0:  # quadrant 4
     angle += 2 * np.pi
 
   return angle
