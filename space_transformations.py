@@ -9,7 +9,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from curvilin import get_poly_curvilin_value_arr
-
+"""
+Transformations between Curviliear and Cartesian space
+"""
 def convert_curvilin_to_cartesian(cand, m, st_i,s_arr,s_prev, s_f1, s_f): 
     mlen = m.shape[1]
     poly_curvilin = cand.curvilin

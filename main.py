@@ -13,6 +13,10 @@ from space_transformations import convert_curvilin_to_cartesian
 from get_reference_path_arc import get_reference_path_arc_lengths
 from process_cand_curv_speed import get_cand_i_curvatures
 from obstacle_collision_check import obstacle_collision_check
+
+"""
+The main program that calculates the candidate paths and performs the selection of the most optimal one amongst those that are executable
+"""
 """
  Loading the map
 """

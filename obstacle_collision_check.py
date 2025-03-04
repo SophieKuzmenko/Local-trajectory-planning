@@ -5,7 +5,11 @@ Created on Wed Dec 18 16:36:56 2024
 
 @author: sofi
 """
-#import numpy as np
+
+
+"""
+Verifying that the safety circles defined for the vehicle and the obstacle won't intersect, e.g. there won't be a colission
+"""
 def obstacle_collision_check(cand, obstacles,R_v):
     for obstacle in obstacles:
         if (circle_collision(cand.cartesian, obstacle.c, R_v,obstacle.r)):

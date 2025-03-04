@@ -112,7 +112,8 @@ plt.show()
 Movement, replanning of local trajectory path, redrawing
 """
 for j in range(50):
-    ind = 3#random.randint(0, cand_opt.cartesian.shape[0] - 1)
+    # Uncomment below for the random closest point on the path, e.g. the car has moved for the unknown anount of meters.
+    ind = 3#random.randint(0, cand_opt.cartesian.shape[0] - 1); 
     s_prev = 0
     curb_prev = cand_opt.ro[ind]
     q_prev = cand_opt_q[ind]
@@ -120,6 +121,7 @@ for j in range(50):
     theta_prev = calculate_angle_of_the_path(P)
     st_i = (st_i + ind)%mlen
     pos_v = cand_opt.cartesian[ind,0:2]
+    # Calculating new local trajectory paths for the current position and additional params
     params = main(s_prev,q_prev, theta_prev, curb_prev, st_i, obstacles, R_ob, R_v,pos_v, ax1, ax2)
     candidates = params[0]
     cand_opt = params[1]
@@ -140,7 +142,7 @@ for j in range(50):
         (lines_cart[l]).set_ydata((candidates[l]).cartesian[:,1])    
     figure.canvas.draw()
     figure.canvas.flush_events()
-    # time.sleep(0.2)
+    # time.sleep(0.2) 
         
 
 

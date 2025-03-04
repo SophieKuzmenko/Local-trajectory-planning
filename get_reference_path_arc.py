@@ -7,6 +7,9 @@ Created on Thu Dec 12 17:08:18 2024
 """
 import numpy as np
 
+"""
+Calculating the distances from the st_i point to the next points on the paths.
+"""
 def get_reference_path_arc_lengths(m,st_i,hpath_distance):
     s_arr  = []
     s = 0
@@ -16,7 +19,7 @@ def get_reference_path_arc_lengths(m,st_i,hpath_distance):
         s_arr.append(s)
         A = m[0:2,(end_i)%mlen]
         B = m[0:2,(end_i+1)%mlen]
-        rc_AB = m[2,(end_i)%mlen] # rayon de courbure
+        rc_AB = m[2,(end_i)%mlen] # the curvature radius
         s+= calculate_arc_length(A,B,rc_AB)
         end_i = (end_i + 1)%mlen
     return [s_arr,end_i]

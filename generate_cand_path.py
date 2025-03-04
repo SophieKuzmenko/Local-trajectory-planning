@@ -7,6 +7,13 @@ Created on Wed Dec 11 13:59:03 2024
 """
 import numpy as np
 # from solve_q_polynomial import solve_q_polynomial
+"""
+Calculating the coefficients of the complex polynomial q(s) of degree 4, that consists of two parts
+
+The eqation for the polynomial depends on the value of s
+q(s) = q_1(s) if s is bigger than s_prev and lies on the outside of the interval (s_f1,s_f)
+q(s) = q_2(s) if s lies in the interval (s_f1,s_f)
+"""
 
 def generate_cand_path_curvilinear(cand, s_f1, s_f2, s_f, s_prev,q_prev, theta_prev, theta_bf, curb_prev, curb_bf):
    q_f = cand.q

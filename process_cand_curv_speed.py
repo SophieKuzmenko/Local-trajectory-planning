@@ -8,7 +8,11 @@ Created on Sat Dec 14 15:14:38 2024
 import numpy as np
 from curvilin import get_poly_curvilin_value_arr
 
-
+"""
+Calculating the curvatures of  a candidate path
+Verifying if such curvatures can be executed
+Considering constrains such as the maximum steering angle
+"""
 def get_cand_i_curvatures(cand, ro_bf, ro_max, s_arr,s_prev, s_f1,s_f):
     poly_curvilin = cand.curvilin
     n_s = len(s_arr)

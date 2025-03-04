@@ -9,8 +9,8 @@ import numpy as np
 
 def calculate_angle_of_the_path(A):
   """
-  Calculates the angle between the tangent to a curve at a given point and the x-axis.
-  Output: angle in radians
+  Function to calculate the angle between the tangent to a curve at a given point and the x-axis.
+  Outputs the angle in radians
   """
   x = A[0]
   y = A[1]
