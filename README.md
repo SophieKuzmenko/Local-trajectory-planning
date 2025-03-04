@@ -1,6 +1,6 @@
 # Local trajectory planning with static obstacle avoidance
 *University project*<br>
-<mark>To view the simulation, run the colored_simulation.py file, not main.py</mark>
+<mark>To view the simulation please run the colored_simulation.py file, not main.py</mark><br>
 Implementation of a local trajectory planning algorithm with static obstacles avoidance described in [1] <br><br>
 The breakdown of the algorithm:
 1. Generating a set of candidate paths
