@@ -1,6 +1,6 @@
 # Local trajectory planning with static obstacle avoidance
 University project
-Implementation of a local trajectory planning algorithm with static obstacles avoidance described in [1]
+Implementation of a local trajectory planning algorithm with static obstacles avoidance described in [1] <br>
 The breakdown of the algorithm:
 1. Generating a set of candidate paths
 2. Eliminating non-executable candidate paths ( due to steering limitations or potential collisions with the obstacles)
