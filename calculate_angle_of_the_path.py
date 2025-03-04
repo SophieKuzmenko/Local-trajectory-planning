@@ -6,6 +6,7 @@ Created on Wed Dec 11 14:58:37 2024
 @author: sofi
 """
 import numpy as np
+
 def calculate_angle_of_the_path(A):
   """
   Calculates the angle between the tangent to a curve at a given point and the x-axis.
